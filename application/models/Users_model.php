@@ -14,18 +14,18 @@
 			return $this->db->insert('customers', $user);
 		}
  
-		public function getUser($id){
-			$query = $this->db->get_where('customers',array('id'=>$id));
+		public function getUser($ID){
+			$query = $this->db->get_where('customers',array('ID'=>$ID));
 			return $query->row_array();
 		}
  
-		public function updateuser($user, $id){
-			$this->db->where('customers.id', $id);
+		public function updateuser($user, $ID){
+			$this->db->where('customers.ID', $ID);
 			return $this->db->update('customers', $user);
 		}
  
-		public function deleteuser($id){
-			$this->db->where('customers.id', $id);
+		public function deleteuser($ID){
+			$this->db->where('customers.ID', $ID);
 			return $this->db->delete('customers');
 		}
  
